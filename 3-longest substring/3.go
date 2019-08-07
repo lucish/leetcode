@@ -18,6 +18,7 @@ func lengthOfLongestSubstring(s string) int {
 		//子串为 [j, i+j)
 		for j := 0; i+j <= len; j++ {
 			des := src[j : i+j]
+			//TODO 超时   检测到重复后优化 跳到第一个重复字母后
 			if !hasRepeatByte(des) {
 				return i
 			}
